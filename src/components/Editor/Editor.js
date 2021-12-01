@@ -11,6 +11,8 @@ export default function Editor({
   setfont,
   align,
   setalign,
+  text,
+  settext,
 }) {
   return (
     <div className="editor">
@@ -52,7 +54,7 @@ export default function Editor({
           </label>
         </div>
       </div>
-      <div className="form-control">
+      <div className="form-control" value={text} onChange={(e) => settext(e.target.value)}>
         <textarea style={{ height: '250px' }} />
         <label>Text</label>
       </div>
